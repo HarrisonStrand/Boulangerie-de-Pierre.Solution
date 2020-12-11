@@ -43,15 +43,15 @@ namespace Bakery.Tests
       List<Pastry> result = Pastry.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
-    // [TestMethod]
-    // public void GetAll_ReturnsItems_PastryList()
-    // {
-    //   string description = "this is surely a Pastry";
-    //   int price = 2;
-    //   Pastry newPastry = new Pastry(description, price);
-    //   List<Pastry> newList = new List<Pastry> { newPastry };
-    //   List<Pastry> result = Pastry.GetAll();
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsItems_PastryList()
+    {
+      string description = "this is surely a Pastry";
+      int price = 2;
+      Pastry newPastry = new Pastry(description, price);
+      List<Pastry> newList = new List<Pastry> { newPastry };
+      List<Pastry> result = Pastry.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
