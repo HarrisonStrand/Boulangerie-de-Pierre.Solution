@@ -50,5 +50,15 @@ namespace Bakery.Tests
       List<Bread> result = Bread.GetAll();
       CollectionAssert.AreEqual(newList, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsItems_BreadList()
+    {
+      string description = "this is surely bread";
+      int price = 5;
+      Bread newBread = new Bread(description, price);
+      List<Bread> newList = new List<Bread> { newBread };
+      List<Bread> result = Bread.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
