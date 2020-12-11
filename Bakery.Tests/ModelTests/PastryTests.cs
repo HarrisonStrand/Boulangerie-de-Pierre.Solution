@@ -6,12 +6,12 @@ using System;
 namespace Bakery.Tests
 {
   [TestClass]
-  public class PastryTests 
+  public class PastryTests : IDisposable
   {
-    // public void Dispose()
-    // {
-    //   Pastry.ClearAll();
-    // }
+    public void Dispose()
+    {
+      Pastry.ClearAll();
+    }
     [TestMethod]
     public void Pastry_CreatesInstanceOfPastry_Pastry()
     {
