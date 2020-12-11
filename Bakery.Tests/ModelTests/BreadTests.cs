@@ -32,5 +32,21 @@ namespace Bakery.Tests
       int result = newBread.BreadPrice;
       Assert.AreEqual(price, result);
     }
+    [TestMethod]
+    public void SetPrice_SetBreadPrice_Int()
+    {
+      //Arange
+      string description = "this is bread";
+      int price = 5;
+      Bread newBread = new Bread(description, price);
+
+      //Act
+      int updatedPrice = 10;
+      newBread.BreadPrice = updatedPrice;
+      int result = newBread.BreadPrice;
+
+      //Assert
+      Assert.AreEqual(updatedPrice, result);
+    }
   }
 }
