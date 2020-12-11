@@ -1,12 +1,13 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjectName;
+using System.Collections.Generic;
+using BoulangeriedePierre.Models;
+using System;
 
-namespace ProjectName.Tests
+namespace BoulangeriedePierre.Tests
 {
   [TestClass]
-  public class ClassNameTests
+  public class BreadTests
   {
-    // Test methods go here
     [TestMethod]
     public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
     {
