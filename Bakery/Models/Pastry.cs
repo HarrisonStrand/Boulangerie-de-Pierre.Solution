@@ -11,7 +11,7 @@ namespace Bakery.Models
 
     private static List<Pastry> _pastryList = new List<Pastry> { }; 
 
-    public Pastr(string description, int price)
+    public Pastry(string description, int price)
     {
       PastryDescription = description;
       PastryPrice = price;
