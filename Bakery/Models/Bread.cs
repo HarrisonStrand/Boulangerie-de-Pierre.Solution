@@ -11,7 +11,7 @@ namespace Bakery.Models
     public Bread(string description, int price )
     {
       BreadDescription = description;
-      BreadPrice = pric;
+      BreadPrice = price;
     }
   }
 }
