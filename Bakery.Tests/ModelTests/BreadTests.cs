@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-// using System.Collections.Generic;
+using System.Collections.Generic;
 using Bakery.Models;
-// using System;
+using System;
 
 namespace Bakery.Tests
 {
@@ -35,18 +35,20 @@ namespace Bakery.Tests
     [TestMethod]
     public void SetPrice_SetBreadPrice_Int()
     {
-      //Arange
       string description = "this is bread";
       int price = 5;
       Bread newBread = new Bread(description, price);
-
-      //Act
       int updatedPrice = 10;
       newBread.BreadPrice = updatedPrice;
       int result = newBread.BreadPrice;
-
-      //Assert
       Assert.AreEqual(updatedPrice, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_BreadList()
+    {
+      List<Bread> newList = new List<Bread> { };
+      List<Bread> result = Bread.GetAll();
+      CollectionAssert.AreEqual(newList, result);
     }
   }
 }
