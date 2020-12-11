@@ -72,15 +72,17 @@ namespace Bakery.Models
               {
               Bread newBreadAmount = new Bread("Bread", 5);
               }
-            }
           Console.WriteLine("_______________________________________________________");
           Console.WriteLine("               Bread added to order"); 
           Console.WriteLine("_______________________________________________________");
           Program.Main();
+          }
         }
         else if (userInput3 == "2")
         {
-          Console.WriteLine("How many Pastries would you like to add to your order?");
+          Console.WriteLine("_______________________________________________________");
+          Console.WriteLine("      How many Pastries would you like to add?");
+          Console.WriteLine("_______________________________________________________");
           int userAmount = int.Parse(Console.ReadLine());
           for(int i = 1; i <= userAmount; i++)
           {
@@ -93,9 +95,12 @@ namespace Bakery.Models
               Pastry newPastryAmount = new Pastry("Pastry", 2);
             }
           }
-          Console.WriteLine("pastry amount added to order");
+          Console.WriteLine("_______________________________________________________");
+          Console.WriteLine("               Pastries added to order"); 
+          Console.WriteLine("_______________________________________________________");
           Program.Main();
         }
+        
       }
       else if (userInput1 == "3")
       {
