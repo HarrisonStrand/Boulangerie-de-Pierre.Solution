@@ -15,13 +15,22 @@ namespace Bakery.Tests
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
     [TestMethod]
-    public void GetDescription_ReturnsBreadDescription_StringAndInt()
+    public void GetDescription_ReturnsBreadDescription_String()
     {
       string description = "this is bread";
       int price = 5;
       Bread newBread = new Bread(description, price);
       string result = newBread.BreadDescription;
       Assert.AreEqual(description, result);
+    }
+    [TestMethod]
+    public void GetPrice_ReturnsBreadPrice_Int()
+    {
+      string description = "this is bread";
+      int price = 5;
+      Bread newBread = new Bread(description, price);
+      int result = newBread.BreadPrice;
+      Assert.AreEqual(price, result);
     }
   }
 }
