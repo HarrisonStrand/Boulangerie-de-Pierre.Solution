@@ -17,10 +17,6 @@ namespace Bakery.Models
       _breadList.Add(this);
     }
     
-    static void GetDealPrice()
-    {
-      Bread newBread = new Bread("Bread", 0);
-    }
     public static List<Bread> GetAll()
     {
       return _breadList;
