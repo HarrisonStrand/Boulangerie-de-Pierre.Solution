@@ -5,7 +5,6 @@ namespace Bakery.Models
 {
   public class Bread
   {
-
     public string BreadDescription { get; set; }
     public int BreadPrice { get;set; }
 
