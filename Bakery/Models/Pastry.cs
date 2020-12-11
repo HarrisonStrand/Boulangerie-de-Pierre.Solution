@@ -13,7 +13,7 @@ namespace Bakery.Models
 
     public Pastry(string description, int price)
     {
-      PastryDescription = descriptio;
+      PastryDescription = description;
       PastryPrice = price;
       _pastryList.Add(this);
     }
