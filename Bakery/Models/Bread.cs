@@ -8,7 +8,7 @@ namespace Bakery.Models
     public string BreadDescription { get; set; }
     public int BreadPrice{get;set;}
 
-    public Bread(string description, int pric )
+    public Bread(string description, int price )
     {
       BreadDescription = description;
       BreadPrice = price;
