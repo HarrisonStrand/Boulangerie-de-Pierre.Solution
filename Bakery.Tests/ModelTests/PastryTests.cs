@@ -36,24 +36,13 @@ namespace Bakery.Tests
       int result = newPastry.PastryPrice;
       Assert.AreEqual(price, result);
     }
-    // [TestMethod]
-    // public void SetPrice_SetPastryPrice_Int()
-    // {
-    //   string description = "this is a Pastry";
-    //   int price = 2;
-    //   Pastry newPastry = new Pastry(description, price);
-    //   int updatedPrice = 10;
-    //   newPastry.PastryPrice = updatedPrice;
-    //   int result = newPastry.PastryPrice;
-    //   Assert.AreEqual(updatedPrice, result);
-    // }
-    // [TestMethod]
-    // public void GetAll_ReturnsEmptyList_PastryList()
-    // {
-    //   List<Pastry> newList = new List<Pastry> { };
-    //   List<Pastry> result = Pastry.GetAll();
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_PastryList()
+    {
+      List<Pastry> newList = new List<Pastry> { };
+      List<Pastry> result = Pastry.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
     // [TestMethod]
     // public void GetAll_ReturnsItems_PastryList()
     // {

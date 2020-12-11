@@ -37,17 +37,6 @@ namespace Bakery.Tests
       Assert.AreEqual(price, result);
     }
     [TestMethod]
-    public void SetPrice_SetBreadPrice_Int()
-    {
-      string description = "this is bread";
-      int price = 5;
-      Bread newBread = new Bread(description, price);
-      int updatedPrice = 10;
-      newBread.BreadPrice = updatedPrice;
-      int result = newBread.BreadPrice;
-      Assert.AreEqual(updatedPrice, result);
-    }
-    [TestMethod]
     public void GetAll_ReturnsEmptyList_BreadList()
     {
       List<Bread> newList = new List<Bread> { };
