@@ -27,15 +27,15 @@ namespace Bakery.Tests
       string result = newPastry.PastryDescription;
       Assert.AreEqual(description, result);
     }
-    // [TestMethod]
-    // public void GetPrice_ReturnsPastryPrice_Int()
-    // {
-    //   string description = "this is a Pastry";
-    //   int price = 2;
-    //   Pastry newPastry = new Pastry(description, price);
-    //   int result = newPastry.PastryPrice;
-    //   Assert.AreEqual(price, result);
-    // }
+    [TestMethod]
+    public void GetPrice_ReturnsPastryPrice_Int()
+    {
+      string description = "this is a Pastry";
+      int price = 2;
+      Pastry newPastry = new Pastry(description, price);
+      int result = newPastry.PastryPrice;
+      Assert.AreEqual(price, result);
+    }
     // [TestMethod]
     // public void SetPrice_SetPastryPrice_Int()
     // {
