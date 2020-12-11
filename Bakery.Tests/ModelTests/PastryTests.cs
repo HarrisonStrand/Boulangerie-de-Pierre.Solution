@@ -18,20 +18,20 @@ namespace Bakery.Tests
       Pastry newPastry = new Pastry("Pastry", 5);
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
-    // [TestMethod]
-    // public void GetDescription_ReturnsPastryDescription_String()
-    // {
-    //   string description = "this is a Pastry";
-    //   int price = 5;
-    //   Pastry newPastry = new Pastry(description, price);
-    //   string result = newPastry.PastryDescription;
-    //   Assert.AreEqual(description, result);
-    // }
+    [TestMethod]
+    public void GetDescription_ReturnsPastryDescription_String()
+    {
+      string description = "pretty sure this is a Pastry";
+      int price = 2;
+      Pastry newPastry = new Pastry(description, price);
+      string result = newPastry.PastryDescription;
+      Assert.AreEqual(description, result);
+    }
     // [TestMethod]
     // public void GetPrice_ReturnsPastryPrice_Int()
     // {
     //   string description = "this is a Pastry";
-    //   int price = 5;
+    //   int price = 2;
     //   Pastry newPastry = new Pastry(description, price);
     //   int result = newPastry.PastryPrice;
     //   Assert.AreEqual(price, result);
@@ -40,7 +40,7 @@ namespace Bakery.Tests
     // public void SetPrice_SetPastryPrice_Int()
     // {
     //   string description = "this is a Pastry";
-    //   int price = 5;
+    //   int price = 2;
     //   Pastry newPastry = new Pastry(description, price);
     //   int updatedPrice = 10;
     //   newPastry.PastryPrice = updatedPrice;
@@ -58,7 +58,7 @@ namespace Bakery.Tests
     // public void GetAll_ReturnsItems_PastryList()
     // {
     //   string description = "this is surely a Pastry";
-    //   int price = 5;
+    //   int price = 2;
     //   Pastry newPastry = new Pastry(description, price);
     //   List<Pastry> newList = new List<Pastry> { newPastry };
     //   List<Pastry> result = Pastry.GetAll();
