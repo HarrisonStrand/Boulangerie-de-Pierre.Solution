@@ -15,7 +15,7 @@ namespace Bakery.Models
     {
       PastryDescription = description;
       PastryPrice = price;
-      _pastryList.Add(this);
+      // _pastryList.Add(this);
     }
     public static List<Pastry> GetAll()
     {
