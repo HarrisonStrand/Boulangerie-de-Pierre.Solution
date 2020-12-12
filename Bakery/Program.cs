@@ -14,6 +14,9 @@ namespace Bakery.Models
       Console.WriteLine("              Bread is 'Buy 2 get 1 FREE!");
       Console.WriteLine("        Pastries are 'Buy 1 for $2 or 3 for $5!");
       Console.WriteLine("_______________________________________________________");
+      Console.WriteLine("                Normal Price of Bread: $5");
+      Console.WriteLine("              Normal Price of Pastries: $2");
+      Console.WriteLine("_______________________________________________________");
       Console.WriteLine("                 START YOUR ORDER BELOW!");
       Console.WriteLine("_______________________________________________________");
       Console.WriteLine(" 1. View Order       2.Add to Order       3.See Total");
@@ -107,6 +110,9 @@ namespace Bakery.Models
       }
       else if (userInput1 == "3")
       {
+        Console.WriteLine("_______________________________________________________");
+        Console.WriteLine("                 Here Is your Order:");
+        Console.WriteLine("_______________________________________________________");
         int BreadTotal = 0;
         Bread.GetAll().ForEach(i => BreadTotal += i.BreadPrice);
         Console.WriteLine("Bread: $" + BreadTotal);
