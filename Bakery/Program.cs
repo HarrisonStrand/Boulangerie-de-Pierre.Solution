@@ -61,30 +61,30 @@ namespace Bakery.Models
           Console.WriteLine("_______________________________________________________");
           Console.WriteLine("      How many Bread loafs would you like to add?");
           Console.WriteLine("_______________________________________________________");
-          int userAmount = int.Parse(Console.ReadLine());
-            for(int i = 1; i <= userAmount; i++)
+          int userAmount1 = int.Parse(Console.ReadLine());
+          for(int i = 1; i <= userAmount1; i++)
+          {
+            if(i % 3 == 0)
             {
-              if(i % 3 == 0)
-              {
-              Bread newBreadAmount = new Bread("Bread (deal)", 0);
-              }
-              else
-              {
-              Bread newBreadAmount = new Bread("Bread", 5);
-              }
+            Bread newBreadAmount = new Bread("Bread (deal)", 0);
+            }
+            else
+            {
+            Bread newBreadAmount = new Bread("Bread", 5);
+            }
+          } 
           Console.WriteLine("_______________________________________________________");
           Console.WriteLine("               Bread added to order"); 
           Console.WriteLine("_______________________________________________________");
           Program.Main();
-          }
         }
         else if (userInput3 == "2")
         {
           Console.WriteLine("_______________________________________________________");
           Console.WriteLine("      How many Pastries would you like to add?");
           Console.WriteLine("_______________________________________________________");
-          int userAmount = int.Parse(Console.ReadLine());
-          for(int i = 1; i <= userAmount; i++)
+          int userAmount2 = int.Parse(Console.ReadLine());
+          for(int i = 1; i <= userAmount2; i++)
           {
             if(i % 3 ==0)
             {
@@ -100,25 +100,33 @@ namespace Bakery.Models
           Console.WriteLine("_______________________________________________________");
           Program.Main();
         }
-        
+        else
+        {
+          Console.WriteLine("Program Terminated. Please use the command 'dotnet run' to begin... again.");
+        }
       }
       else if (userInput1 == "3")
       {
         int BreadTotal = 0;
         Bread.GetAll().ForEach(i => BreadTotal += i.BreadPrice);
-        Console.WriteLine("Bread: " + BreadTotal);
+        Console.WriteLine("Bread: $" + BreadTotal);
         int PastryTotal = 0;
         Pastry.GetAll().ForEach(i => PastryTotal += i.PastryPrice);
-        Console.WriteLine("Pastry: " + PastryTotal);
+        Console.WriteLine("Pastry: $" + PastryTotal);
         int GrandTotal = BreadTotal + PastryTotal;
-        Console.WriteLine("Your Order Total is: " + "$" + GrandTotal);
+        Console.WriteLine("_______________________________________________________");
+        Console.WriteLine("       Your Order Total is: " + "$" + GrandTotal);
+        Console.WriteLine("_______________________________________________________");
+        Console.WriteLine("        Press any key to go back to main Menu");
+        Console.WriteLine("_______________________________________________________");
+        Console.ReadLine();
+        Program.Main();
       }
       else
       {
         Console.WriteLine("Please choose an option from the numerical list");
         Console.WriteLine("Program is terminated, please use the command 'dotnet run' to start");
       }
-
     }
   }
 }
