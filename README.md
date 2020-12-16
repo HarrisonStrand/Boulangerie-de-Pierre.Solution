@@ -16,18 +16,14 @@ https://github.com/HarrisonStrand/Boulangerie-de-Pierre.Solution.git' in the dir
 (b) Alternatively, click 'Download Zip' and open the file on your machine
 4. Navigate to 'BoulangeriedePierre.Tests' directory within the project and run: 'dotnet restore'
 5. Navigate back into the main directory 'BoulangeriedePierre.Solution'
-6. Navigate into the BoulangeriedePierre directory and run 'dotnet run' to start the console application.
+6. Navigate into the 'Bakery' directory and run 'dotnet build' then 'dotnet run' to start the console application.
 
 #### Known Bugs
-No known bugs.
+Error handling in Program.cs (line 67 and line 89)
+  -Section navigation does not allow for errors if user enters a non numerical character.
+  -non numbers will terminate the console application.
 
 #### Contact me at: _[harrisonstrand@gmailcom](harrisonstrand@gmail.com)_
-
-## Specs:
-| Describe:  | Input | Output |
-| :-----------------------------------| :------------- | :------------- |
-| Method()| | |
-
 
 ## Technologies Used
 C# version 7.3

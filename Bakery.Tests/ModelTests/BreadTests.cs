@@ -28,25 +28,28 @@ namespace Bakery.Tests
       Assert.AreEqual(description, result);
     }
     [TestMethod]
-    public void GetPrice_ReturnsBreadPrice_Int()
+    public void GetPriceBread_ReturnsBreadPrice_Int()
     {
-      string description = "this is bread";
-      int price = 5;
-      Bread newBread = new Bread(description, price);
-      int result = newBread.BreadPrice;
-      Assert.AreEqual(price, result);
+      List<Bread> newList = new List<Bread> { };
+      Bread newBread = new Bread("bread", 5);
+      List<Bread> result = Bread.GetAll();
+      int result2 = Bread.GetPriceBread()
+      // string description = "this is bread";
+      // int price = 5;
+      // int userAmount = 2;
+      // Bread newBread = new Bread(description, price);
+      // int result = Bread.GetPriceBread(userAmount);
+      // Assert.AreEqual(newBread.BreadPrice, result);
     }
-    [TestMethod]
-    public void GetDealPrice_SetDealPrice_Int()
-    {
-      string description = "Bread";
-      int price = 5;
-      Bread newBread = new Bread(description, price);
-      int DealPrice = 0;
-      newBread.BreadPrice = DealPrice;
-      int result = newBread.BreadPrice;
-      Assert.AreEqual(DealPrice, result);
-    }
+    // [TestMethod]
+    // public void GetPriceBread_ReturnsBreadPriceDeal_Int()
+    // {
+    //   string description = "this is bread";
+    //   int price = 0;
+    //   Bread newBread = new Bread(description, price);
+    //   int result = newBread.BreadPrice;
+    //   Assert.AreEqual(price, result);
+    // }
     [TestMethod]
     public void GetAll_ReturnsEmptyList_BreadList()
     {

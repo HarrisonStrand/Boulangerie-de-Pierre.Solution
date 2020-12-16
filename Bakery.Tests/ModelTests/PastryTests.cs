@@ -36,17 +36,6 @@ namespace Bakery.Tests
       int result = newPastry.PastryPrice;
       Assert.AreEqual(price, result);
     }
-        [TestMethod]
-    public void GetDealPrice_SetDealPrice_Int()
-    {
-      string description = "Pastry";
-      int price = 2;
-      Pastry newPastry = new Pastry(description, price);
-      int DealPrice = 0;
-      newPastry.PastryPrice = DealPrice;
-      int result = newPastry.PastryPrice;
-      Assert.AreEqual(DealPrice, result);
-    }
     [TestMethod]
     public void GetAll_ReturnsEmptyList_PastryList()
     {

@@ -20,6 +20,21 @@ namespace Bakery.Models
     {
       return _breadList;
     }
+
+    public static void GetPriceBread(int userAmount1)
+    {
+      for(int i = 1; i <= userAmount1; i ++)
+      {
+        if(i % 3 == 0)
+        {
+          Bread newBreadAmount = new Bread("Bread (deal)", 0);
+        }
+        else
+        {
+          Bread newBreadAmount = new Bread("Bread", 5);
+        }
+      } 
+    }
     public static void ClearAll()
     {
       _breadList.Clear();
